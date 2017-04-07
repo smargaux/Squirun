@@ -20,11 +20,11 @@ public class AnimationSqui : MonoBehaviour {
 	}
 	IEnumerator spriteRoutine(){
 		while (isrunning) {
+//			AudioSource.Stop ();
 			yield return new WaitForSeconds (animationTime);
 			if (count > 2)
 				count = 0;
 			squi.mesh = Squis [count];
-			Debug.Log ("Couleur " + Colors [count].name);
 			SquiColor.material.mainTexture = Colors [count];
 			count++;
 		}
